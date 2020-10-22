@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'docker build -t yeshwanthjavvaji/knote .'
+                sh 'docker build -t yeshwanthjavvaji/knote:${BUILD_NUMBER} .'
                 sh 'docker images'
             }
         }
