@@ -9,7 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'docker build -t knote .'
+                sh 'docker build -t yeshwanthjavvaji/knote .'
+                sh 'docker images'
             }
         }
         stage('Test') {
