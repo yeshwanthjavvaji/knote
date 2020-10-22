@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage(‘Dcoker Build') {
+        stage('Build') {
             steps {
                 echo 'Building..'
                 sh 'docker build -t yeshwanthjavvaji/knote:${BUILD_NUMBER} .'
