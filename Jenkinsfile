@@ -18,7 +18,6 @@ pipeline {
         stage('psuh to dockerhub') {
             steps {
                 echo 'Deploying....'
-                sh 'docker login --username=yeshwanthjavvaji --password=123456789 docker.io'
                 sh 'docker push yeshwanthjavvaji/knote:${BUILD_NUMBER}'
             }
         }
