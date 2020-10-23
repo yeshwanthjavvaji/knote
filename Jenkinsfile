@@ -15,9 +15,10 @@ pipeline {
                  echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
-        stage('Deploy') {
+        stage('psuh to dockerhub') {
             steps {
                 echo 'Deploying....'
+                sh 'docker push yeshwanthjavvaji/knote:${BUILD_NUMBER}'
             }
         }
     }
