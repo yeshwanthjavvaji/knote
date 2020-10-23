@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'docker ps'
+                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
         stage('Deploy') {
